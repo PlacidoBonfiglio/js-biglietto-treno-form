@@ -20,17 +20,16 @@ const price = document.getElementById('price');
 
 
 // FASE GESTIONE EVENTI
+// Passenger Name
 generateBtn.addEventListener('click', function (e) {
     e.preventDefault();
 
     // recupero input
-    const nameValue = input.value.trim();
+    const fullName = input.value.trim();
 
     // stampo
-    if (nameValue) {
-        passengerName.innerText = nameValue;
+    if (fullName) {
+        passengerName.innerText = fullName;
         input.value = '';
     }
-     
-
 })
