@@ -11,7 +11,45 @@
 </head>
 
 <body>
+    <div class="container">
+        <form action="">
+            <div id="top-form" class="row mb-5 mt-5">
+                <h1 class="text-center text-white">TICKET PRICE</h1>
+                <div class="mb-3 col-4 text-center mb-5">
+                    <label class="form-label">User Name</label>
+                    <input type="text" class="form-control" placeholder="Insert your full name">
+                </div>
+
+                <div class="mb-3 col-4 text-center mb-5">
+                    <label class="form-label">Kilometers</label>
+                    <input type="text" class="form-control" placeholder="total kilometers of the trip">
+                </div>
+
+                <div class="mb-3 col-4 text-center mb-5">
+                    <label class="form-label">Age</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Adult</option>
+                        <option value="1">Minor</option>
+                        <option value="2">Over 65</option>
+                    </select>
+                </div>
+
+                <div  id="bottom-form">
+                    <div class="text-center mb-4">
+                        <button type="reset" class="btn btn-secondary me-4">Cancel</button>
+                        <button type="submit" class="btn btn-success">Generete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ticket">
+                <h1 class="text-center text-white">YOUR TICKET</h1>
+
+            </div>
+        </form>
+    </div>
     
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,5 +1,13 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+#top-form {
+    min-height: 200px;
+    background-color: rgb(132, 189, 255);
+    border: 5px solid rgb(186, 218, 255);
+    border-radius: 20px;
+}
+
+#ticket {
+    min-height: 200px;
+    background-color: rgb(132, 189, 255);
+    border: 5px solid rgb(186, 218, 255);
+    border-radius: 20px;
 }
