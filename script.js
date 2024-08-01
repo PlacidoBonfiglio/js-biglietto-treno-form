@@ -9,9 +9,25 @@ console.log('JS OK');
 // 7. Insert the ticket price into the DOM
 
 // PREPARATORY PHASE
+// 1. Retrieve the element of my interest from the DOM
 const fullNameField = document.getElementById('fullname');
 const kilField = document.getElementById('kilometers');
 const generateBtn = document.getElementById('generate');
+const input = document.querySelector('input');
+const passengerName = document.getElementById('passenger-name');
+const offer = document.getElementById('offer');
+const price = document.getElementById('price');
 
 
 // FASE GESTIONE EVENTI
+generateBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    // recupero input
+    const nameValue = input.value.trim();
+
+    // stampo
+    passengerName.innerText = nameValue;
+     
+
+})
