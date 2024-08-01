@@ -27,7 +27,10 @@ generateBtn.addEventListener('click', function (e) {
     const nameValue = input.value.trim();
 
     // stampo
-    passengerName.innerText = nameValue;
+    if (nameValue) {
+        passengerName.innerText = nameValue;
+        input.value = '';
+    }
      
 
 })
