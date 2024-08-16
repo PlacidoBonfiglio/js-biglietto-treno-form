@@ -11,48 +11,81 @@
 </head>
 
 <body>
-    <div class="container">
-        <form action="">
+    <main class="container">
+        <form>
             <div class="row mb-5 mt-5 top-form">
                 <h1 class="text-center text-white">TICKET PRICE</h1>
+
+                <!-- PASSENGER NAME FORM -->
                 <div class="mb-3 col-4 text-center mb-5">
                     <label class="form-label">User Name</label>
                     <input type="text" id="fullname" class="form-control" placeholder="Insert your full name">
                 </div>
 
+                <!-- KILOMETERS FORM -->
                 <div class="mb-3 col-4 text-center mb-5">
                     <label class="form-label">Kilometers</label>
-                    <input type="number" id="kilometers" class="form-control" placeholder="total kilometers of the trip">
+                    <input type="number" id="kilometers" class="form-control" placeholder="total kilometers of the trip" value="5">
                 </div>
 
+                <!-- AGE FORM -->
                 <div class="mb-3 col-4 text-center mb-5">
                     <label id="age" class="form-label">Age</label>
                     <select class="form-select" aria-label="Default select example">
-                        <option selected>Adult</option>
+                        <option value="">Adult</option>
                         <option value="1">Minor</option>
                         <option value="2">Over 65</option>
                     </select>
                 </div>
 
+                <!-- BUTTONS FORM -->
                 <div  class="bottom-form">
                     <div class="text-center mb-4">
-                        <button type="reset" id="reset" class="btn btn-secondary me-4">Cancel</button>
-                        <button type="submit" id="generate" class="btn btn-success">Generete</button>
+                        <button type="reset" id="reset" class="btn btn-secondary me-4 border border-light">Cancel</button>
+                        <button type="submit" id="generate" class="btn btn-success border border-light">Generete</button>
                     </div>
                 </div>
             </div>
-
-            <div id="ticket">
-                <h1 class="text-center text-white">YOUR TICKET</h1>
-                <div class="text-white">
-                    <div id="passenger-name"></div>
-                    <div id="offer"></div>
-                    <div id="price"></div>
-                </div>
-                
-            </div>
         </form>
-    </div>
+
+        <!-- TICKET -->
+        <div id="ticket">
+            <h1 class="text-center text-white">YOUR TICKET</h1>
+            <div class="text-white row row-cols-md-5 text-center">
+                <!-- PASSENGER NAME -->
+                <div>
+                    <h4 class="mb-4 text-black">Passenger Name</h4>
+                    <h5 id="passenger-name"></h5>
+                </div>
+
+                <!-- OFFER -->
+                <div>
+                    <h4 class="mb-4 text-black">Offer</h4>
+                    <h5 id="offer"></h5>
+                </div>
+
+                <!-- CARRIAGE -->
+                <div>
+                    <h4 class="mb-4 text-black">Carriage</h4>
+                    <h5 id="carriage"></h5>
+                </div>
+
+                <!-- PNR CODE -->
+                <div>
+                    <h4 class="mb-4 text-black">PNR Code</h4>
+                    <h5 id="pnr"></h5>
+                </div>
+
+                <!-- PRICE -->
+                <div>
+                    <h4 class="mb-4 text-black">Price</h4>
+                    <h5 id="price"></h5>
+                </div>
+            </div>
+                
+        </div>
+        
+    </main>
     
     <script src="script.js"></script>
 </body>

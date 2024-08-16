@@ -10,13 +10,19 @@ console.log('JS OK');
 
 // PREPARATORY PHASE
 // 1. Retrieve the element of my interest from the DOM
+const form = document.querySelector('form');
 const fullNameField = document.getElementById('fullname');
-const kilField = document.getElementById('kilometers');
+const kilometersField = document.getElementById('kilometers');
+const age = document.getElementById('age');
 const generateBtn = document.getElementById('generate');
-const input = document.querySelector('input');
 const passengerName = document.getElementById('passenger-name');
 const offer = document.getElementById('offer');
+const carriage = document.getElementById('carriage');
+const pnr = document.getElementById('pnr');
 const price = document.getElementById('price');
+
+// Kilometer Price
+const kilometerPrice = 0.21;
 
 
 // FASE GESTIONE EVENTI
@@ -24,12 +30,27 @@ const price = document.getElementById('price');
 generateBtn.addEventListener('click', function (e) {
     e.preventDefault();
 
-    // recupero input
-    const fullName = input.value.trim();
+    // recupero input nome
+    const fullName = fullNameField.value.trim();
+
+    //recupero input kilometri da percorrerre
+    const totalKilometers = kilometersField.value;
+
+    //recupero dell'età
+    const passengerAge = age.value;
+
 
     // stampo
     if (fullName) {
         passengerName.innerText = fullName;
-        input.value = '';
+        fullNameField.value = '';
     }
-})
+
+    if (totalKilometers) {
+        kilometersField.value = '';
+    }
+
+}
+)
+
+
