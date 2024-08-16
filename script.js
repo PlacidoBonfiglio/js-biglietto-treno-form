@@ -67,6 +67,9 @@ generateBtn.addEventListener('click', function (e) {
 
     // Stampo Nome Completo
     passengerName.innerText = fullName;
+
+    // Stampo Offerta
+    offer.innerText = rateName;
     
 })
 
