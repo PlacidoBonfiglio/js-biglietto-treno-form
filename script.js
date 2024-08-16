@@ -6,7 +6,9 @@ console.log('JS OK');
 // 4. Ask the user for his or her age
 // 5. Calculate the total price of the trip
 // 6. Apply discount based on age
-// 7. Insert the ticket price into the DOM
+// 7. Print Elements into the DOM
+// 8. Remove "d-none" class from ticket
+// 9. Clear Form after pressing "Generate" button
 
 // PREPARATORY PHASE
 // Retrieve the element of my interest from the DOM
@@ -24,7 +26,7 @@ const passengerName = document.getElementById('passenger-name');
 const offer = document.getElementById('offer');
 const carriage = document.getElementById('carriage');
 const pnr = document.getElementById('pnr');
-const price = document.getElementById('price');
+const totalPrice = document.getElementById('price');
 
 // Kilometer Price
 const kilometerPrice = 0.21;
@@ -65,13 +67,28 @@ generateBtn.addEventListener('click', function (e) {
 
     console.log(price, rateName);
 
+    // Numero random della carrozza del treno
+    const randomCarriage = Math.floor(Math.random() * 9) + 1;
+
+    // Numero random PNR
+    const randomPnr = Math.floor(Math.random() * (100000 - 90000)) + 90000;
+
     // Stampo Nome Completo
     passengerName.innerText = fullName;
 
     // Stampo Offerta
     offer.innerText = rateName;
-    
+
+    // Stampo Carrozza
+    carriage.innerText = randomCarriage;
+
+    // Stampo PNR
+    pnr.innerText = randomPnr;
+
+    // STampo il Prezzom del biglietto
+    totalPrice.innerText = '€ ' + price.toFixed(2);
+
+    // Rimuovo la clase d-none dal biglietto
+    ticket.classList.remove('d-none');
+
 })
-
-
-
