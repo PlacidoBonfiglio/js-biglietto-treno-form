@@ -91,4 +91,9 @@ generateBtn.addEventListener('click', function (e) {
     // Rimuovo la clase d-none dal biglietto
     ticket.classList.remove('d-none');
 
+    // FORM reset
+    fullNameField.value = '';
+    kilometersField.value = 5;
+    ageField.value = '';
+    //form.reset();
 })
